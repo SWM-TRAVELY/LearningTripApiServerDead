@@ -1,4 +1,4 @@
-package app.learningtrip.apiserver.place.entity;
+package app.learningtrip.apiserver.place.domain;
 
 import app.learningtrip.apiserver.place.dto.response.PlaceInfoResponse;
 
