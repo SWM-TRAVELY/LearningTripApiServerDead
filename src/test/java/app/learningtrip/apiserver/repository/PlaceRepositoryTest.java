@@ -1,8 +1,7 @@
 package app.learningtrip.apiserver.repository;
 
-import app.learningtrip.apiserver.place.domain.Place;
-import app.learningtrip.apiserver.place.repository.PlaceRepository;
-import org.assertj.core.api.Assertions;
+import app.learningtrip.apiserver.common.entity.Place;
+import app.learningtrip.apiserver.common.repository.PlaceRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

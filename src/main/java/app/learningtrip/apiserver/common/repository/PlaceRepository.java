@@ -1,9 +1,7 @@
-package app.learningtrip.apiserver.place.repository;
+package app.learningtrip.apiserver.common.repository;
 
-import app.learningtrip.apiserver.place.domain.Place;
+import app.learningtrip.apiserver.common.entity.Place;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
 
 public interface PlaceRepository extends JpaRepository<Place, Integer> {
 }

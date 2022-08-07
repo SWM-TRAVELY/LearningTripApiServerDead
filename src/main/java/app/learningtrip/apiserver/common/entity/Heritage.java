@@ -1,4 +1,4 @@
-package app.learningtrip.apiserver.place.domain;
+package app.learningtrip.apiserver.common.entity;
 
 import javax.persistence.*;
 
