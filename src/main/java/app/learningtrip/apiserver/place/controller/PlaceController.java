@@ -4,7 +4,6 @@ import app.learningtrip.apiserver.place.dto.response.PlaceInfoResponse;
 import app.learningtrip.apiserver.place.repository.PlaceTempRepository;
 import app.learningtrip.apiserver.place.service.PlaceInfoService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
