@@ -10,9 +10,9 @@ public class Place {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "place_id", unique = true, nullable = false)
-    private int id;
+    private long placeId;
     @Column(length = 3, nullable = false)
-    private int type;
+    private int typeId;
     @Column(length = 100, nullable = false)
     private String name;
     @Column(nullable = false)
@@ -24,6 +24,9 @@ public class Place {
     private double latitude;
     @Column(length = 20, nullable = false)
     private double longitude;
+
+    @Column(name = "image")
+    private String image;
 
     @Column(length = 100)
     private String tel;
@@ -42,20 +45,20 @@ public class Place {
 
     private boolean bookTour;
 
-    public int getId() {
-        return id;
+    public long getId() {
+        return placeId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.placeId = id;
     }
 
     public int getType() {
-        return type;
+        return typeId;
     }
 
     public void setType(int type) {
-        this.type = type;
+        this.typeId = type;
     }
 
     public String getName() {
