@@ -1,49 +1,168 @@
 package app.learningtrip.apiserver.place.domain;
 
 import lombok.Builder;
+
 import javax.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.experimental.SuperBuilder;
 
 @Entity
-@Getter @Setter
-@SuperBuilder
 @Table(name = "place")
 public class Place {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "place_id", unique = true, nullable = false)
-    protected int id;
+    private int id;
     @Column(length = 3, nullable = false)
-    protected int type;
+    private int type;
     @Column(length = 100, nullable = false)
-    protected String name;
-    protected String overview;
-    protected String img1;
-    protected String img2;
+    private String name;
+    @Column(nullable = false)
+    private String overview;
 
     @Column(length = 100, nullable = false)
-    protected String address;
-    @Column(length = 20)
-    protected double latitude;
-    @Column(length = 20)
-    protected double longitude;
+    private String address;
+    @Column(length = 20, nullable = false)
+    private double latitude;
+    @Column(length = 20, nullable = false)
+    private double longitude;
 
     @Column(length = 100)
-    protected String tel;
+    private String tel;
     @Column(length = 300)
-    protected String info;
+    private String info;
 
     @Column(length = 200)
-    protected String restDate;
+    private String restDate;
     @Column(length = 700)
-    protected String useTime;
+    private String useTime;
 
     @Column(length = 300)
-    protected String parking;
-    protected boolean babyCarriage;
-    protected boolean pet;
+    private String parking;
+    private boolean babyCarriage;
+    private boolean pet;
 
-    protected boolean bookTour;
+    private boolean bookTour;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOverview() {
+        return overview;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public String getRestDate() {
+        return restDate;
+    }
+
+    public void setRestDate(String restDate) {
+        this.restDate = restDate;
+    }
+
+    public String getUseTime() {
+        return useTime;
+    }
+
+    public void setUseTime(String useTime) {
+        this.useTime = useTime;
+    }
+
+    public String getParking() {
+        return parking;
+    }
+
+    public void setParking(String parking) {
+        this.parking = parking;
+    }
+
+    public boolean isBabyCarriage() {
+        return babyCarriage;
+    }
+
+    public void setBabyCarriage(boolean babyCarriage) {
+        this.babyCarriage = babyCarriage;
+    }
+
+    public boolean isPet() {
+        return pet;
+    }
+
+    public void setPet(boolean pet) {
+        this.pet = pet;
+    }
+
+    public boolean isBookTour() {
+        return bookTour;
+    }
+
+    public void setBookTour(boolean bookTour) {
+        this.bookTour = bookTour;
+    }
+
+    public void print() {
+        System.out.println("This is " + name);
+    }
 }
