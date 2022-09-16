@@ -2,7 +2,7 @@ package app.learningtrip.apiserver.heritage.controller;
 
 import app.learningtrip.apiserver.heritage.domain.Heritage;
 import app.learningtrip.apiserver.place.domain.Place;
-import app.learningtrip.apiserver.place.domain.Place_12;
+import app.learningtrip.apiserver.place.domain.Place_Detail_Tour;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +14,7 @@ public class HeritageController {
 
     @GetMapping("/heritage/{heritage_id}")
     public Heritage info(@PathVariable(name = "heritage_id") Long heritage_id) {
-        Place place = Place_12.builder()
+        Place place = Place_Detail_Tour.builder()
             .type(12)
             .name("숭례문")
             .overview("숭례문(崇禮門)은 조선 태조 5년(1396)에 최초로 축조되었고 1398년 2월 중건되었다. 이 문은 조선시대 한성 도성의 정문으로  4대문 가운데 남쪽에 위치하므로, 남대문으로도 불린다. 1448년에도 크게 고쳐지었다. "

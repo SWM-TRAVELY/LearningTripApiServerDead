@@ -39,12 +39,11 @@ public class Heritage {
     private String cat3;
     @Column(length = 15)
     private String cat4;
-
     @Column(length = 100)
     private String period;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "place_id")
+    @JoinColumn(name = "id")
     public Place place;
 
     public static HeritageBuilder builder() {
