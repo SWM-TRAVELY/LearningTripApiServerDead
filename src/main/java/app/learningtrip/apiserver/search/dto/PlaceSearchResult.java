@@ -1,5 +1,8 @@
 package app.learningtrip.apiserver.search.dto;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class PlaceSearchResult {
     private long placeId;
 
@@ -7,5 +10,7 @@ public class PlaceSearchResult {
 
     private int typeId;
 
-    private String imageURL;
+    private String image;
+
+//    위도 경도
 }

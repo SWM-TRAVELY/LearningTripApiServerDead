@@ -17,7 +17,7 @@ public class PlaceController {
 
     private final PlaceTempRepository placeTempRepository;
 
-    @GetMapping("info/{place_id}")
+    @GetMapping("{place_id}/info")
     public ResponseEntity<PlaceInfoResponse> info(@PathVariable("place_id") Long place_id){
 
         return ResponseEntity.ok().body(new PlaceInfoService(placeTempRepository).getPlaceInfo(place_id));

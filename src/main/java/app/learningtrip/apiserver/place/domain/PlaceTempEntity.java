@@ -13,7 +13,7 @@ import javax.persistence.Table;
 // 얘는 response 형태로 테이블 임시로 짜뒀어요 수정해야함!!!
 
 @Entity
-@Table(name = "PlaceTemp")
+@Table(name = "place_temp")
 public class PlaceTempEntity {
     @Id
     @Column(name = "place_id")
