@@ -6,7 +6,7 @@ import lombok.experimental.SuperBuilder;
 
 @Getter @Setter
 @SuperBuilder
-public class Place_14 extends Place {
+public class Place_Detail_Culture extends Place {
 
   private String discount;
   private String parkingFee;
