@@ -1,10 +1,9 @@
 package app.learningtrip.apiserver.place.controller;
 
 import app.learningtrip.apiserver.place.domain.Place;
-import app.learningtrip.apiserver.place.domain.Place_12;
-import app.learningtrip.apiserver.place.domain.Place_14;
+import app.learningtrip.apiserver.place.domain.Place_Detail_Tour;
+import app.learningtrip.apiserver.place.domain.Place_Detail_Culture;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +15,7 @@ public class PlaceController {
     @GetMapping("/place/{place_id}")
     public Place info(@PathVariable(name = "place_id") int place_id){
         if (place_id == 12){
-            return Place_12.builder()
+            return Place_Detail_Tour.builder()
                 .type(12)
                 .name("숭례문")
                 .overview("숭례문(崇禮門)은 조선 태조 5년(1396)에 최초로 축조되었고 1398년 2월 중건되었다. 이 문은 조선시대 한성 도성의 정문으로  4대문 가운데 남쪽에 위치하므로, 남대문으로도 불린다. 1448년에도 크게 고쳐지었다. "
@@ -50,7 +49,7 @@ public class PlaceController {
                 .heritageRec(false)
                 .build();
         } else if (place_id == 14) {
-            return Place_14.builder()
+            return Place_Detail_Culture.builder()
                 .type(14)
                 .name("국립중앙박물관")
                 .overview("국립중앙박물관은 42만 점의 소장유물을 소장하고 있으며, 고고, 역사, 미술, 기증, 아시아 관련 문화재를 전시하는 상설 전시실과 다양한 전시가 가능하도록 가변성 있게 구성된 기획 전시실, 체험과 참여 학습을 통해 전시를 이해하도록 설계된 어린이 박물관, 박물관 야외정원을 이용하여 석탑 등 다양한 석조유물을 전시한 야외전시실로 이뤄진다. "
